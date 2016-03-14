@@ -1,0 +1,47 @@
+
+.menu-list {
+	ul {
+		li {
+			transition:all @trans-speed ease;
+			position:relative;
+			#fe.z(4);
+			
+			&.active {
+				
+				&:after {
+					#fe.w(100%);
+					#fe.bg(#f5f8fa);
+				}
+				
+				a {
+					#fe.color(#000000);
+				}
+			}
+			
+			&:after {
+				content:'';
+				position:absolute;
+				top:0;
+				right:0;
+				#fe.h(100%);
+				#fe.w(0%);
+				#fe.bg(transparent);
+				#fe.z(5);
+				transition:all @trans-speed ease;
+			}
+			
+			a {
+				display:block;
+				position:relative;
+				padding:2em;
+				transition:all @trans-speed ease;
+				
+				#fe.color(#ffffff);
+				#fe.uppercase();
+				#fe.bold();
+				#fe.z(6);
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.mobile-nav {
+	position:fixed;
+	left:initial;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:4em;
+	z-index:2;
+	
+	#fe.bg(rgba(123,168,63,0.5));
+	
+	transition:all @trans-speed ease;
+	
+	@media @media-size-xs {
+		& {
+			display:table;
+			vertical-align:center;
+			
+			a {
+				display:table-cell;
+				text-align:center;
+				#fe.w(100%);
+				#fe.h(inherit);
+				#fe.lh(40px);
+				#fe.bold();
+				#fe.uppercase();
+				#fe.color(#ffffff);
+			}
+		}
+	}
+	
+	@media @media-size-sm {
+		& {
+			display:table;
+			vertical-align:center;
+			
+			a {
+				display:table-cell;
+				text-align:center;
+				#fe.w(100%);
+				#fe.h(inherit);
+				#fe.lh(40px);
+				#fe.bold();
+				#fe.uppercase();
+				#fe.color(#ffffff);
+			}
+		}
+	}
+	
+	@media @media-size-md {
+		& {
+			display:none;
+		}
+	}
+	
+	@media @media-size-lg {
+		& {
+			display:none;
+		}
+	}
+	
+}

@@ -1,0 +1,40 @@
+.content-container {
+	position:absolute;
+	left:initial;
+	right:0;
+	top:0;
+	width:75%;
+	min-height:100%;
+	z-index:1;
+	/*overflow-x:hidden;*/
+	transition:all @trans-speed ease;
+	
+	@media @media-size-xs {
+		& {
+			width:100%;
+			left:0;
+			right:initial;
+		}
+	}
+	
+	@media @media-size-sm {
+		& {
+			width:100%;
+			left:0;
+			right:initial;
+		}
+	}
+	
+	@media @media-size-md {
+		& {
+			width:67%;
+		}
+	}
+	
+	@media @media-size-lg {
+		& {
+			width:75%;
+		}
+	}
+	
+}
