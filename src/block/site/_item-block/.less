@@ -25,8 +25,46 @@
 	.entity-type {
 		&.news {
 			
+			&:hover {
+				.meta-cont {
+					opacity:1;
+					
+					@media @media-size-xs {
+						& {
+							opacity:0;
+						}
+					}
+					@media @media-size-sm {
+						& {
+							opacity:0;
+						}
+					}
+				}
+			}
+			
 			.image-cont {
 				margin-bottom:3em;
+				
+			}
+			.meta-cont {
+				opacity:0;
+				transition:all @trans-speed ease;
+				
+				.meta-item {
+					clear:both;
+					
+					.title {
+						float:left;
+					}
+					.value {
+						float:right;
+						
+						a {
+							#fe.color(#000000);
+							#fe.underline();
+						}
+					}
+				}
 				
 			}
 			.text-cont {
