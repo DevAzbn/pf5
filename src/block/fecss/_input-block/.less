@@ -1,0 +1,27 @@
+.input-block {
+	display:block;
+	margin:1em 0;
+	
+	label {
+		display: block;
+		margin-bottom: 0.3em;
+		#fe.size(1.5em);
+		#fe.bold();
+	}
+	
+	input, select, textarea {
+		display: block;
+		padding: 0.3em;
+		width: 100%;
+		border: 1px green solid;
+		#fe.size(2em);
+		
+		&[type="submit"] {
+			.cleardefault();
+			display: inline-block;
+			padding: 0.3em 2em;
+			#fe.w(initial);
+		}
+	}
+	
+}
