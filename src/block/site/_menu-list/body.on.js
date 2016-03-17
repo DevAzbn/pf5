@@ -3,6 +3,15 @@ $(document.body).on('fecss.menu-list.item.click', null, {}, function(event, a){
 	
 	var btn = a;
 	var href = btn.attr('href');
+	var target = btn.attr('data-target');
+	
+	if(btn.hasClass('url-history')) {
+		if(typeof target != 'undefined' && target != 'undefined') {
+			href = target;
+		} else {
+			href = $('.item-block.active').attr('id');
+		}
+	}
 	
 	btn.closest('.menu-list').find('.item.active').removeClass('active');
 	btn.closest('.item').addClass('active');
