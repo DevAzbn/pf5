@@ -6,8 +6,11 @@ $(document.body).on('fecss.menu-list.item.click', null, {}, function(event, a){
 	var target = btn.attr('data-target');
 	
 	if(btn.hasClass('url-history')) {
-		if(typeof target != 'undefined' && target != 'undefined') {
-			href = target;
+		if(target != '' && typeof target != 'undefined' && target != 'undefined') {
+			var t_arr = target.split(',');
+			href = t_arr[0];
+			href = href.split(':');
+			href = href[0];
 		} else {
 			href = $('.item-block.active').attr('id');
 		}
