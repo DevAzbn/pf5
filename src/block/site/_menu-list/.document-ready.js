@@ -1,2 +1,2 @@
 
-$('.menu-list .item:first-child a').trigger('click.fecss.menu-list.item.a');
+$('.menu-list .item.contented:first-child a').trigger('click.fecss.menu-list.item.contented.a');

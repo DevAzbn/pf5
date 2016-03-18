@@ -10,4 +10,4 @@ $(".scroll-container").each(function(t){var r,o=$(this),a=$(o.attr("data-target"
 
 $(".touchevents .menu-container.touchswipe").swipe({swipeLeft:function(e,t,n,o,i,c){$(document.body).trigger("fecss.menu-container.hide")},threshold:33}),$(".touchevents .content-container.touchswipe").swipe({swipeRight:function(e,t,n,o,i,c){$(document.body).trigger("fecss.menu-container.show")},threshold:33});
 $(document.body).on("click.fecss.url-history",".url-history",{},function(t){t.preventDefault();var e=$(this),r=e.attr("href"),o=e.attr("data-target");"undefined"!=typeof o&&"undefined"!=o||(o="title:title, body:body");var d=!0;$(document.body).trigger("fecss.url-history.get",[r,o,d])});
-$(".menu-list .item:first-child a").trigger("click.fecss.menu-list.item.a");
+$(".menu-list .item.contented:first-child a").trigger("click.fecss.menu-list.item.contented.a");

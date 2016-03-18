@@ -1,5 +1,5 @@
 
-$(document.body).on('fecss.menu-list.item.click', null, {}, function(event, a){
+$(document.body).on('fecss.menu-list.item.contented.click', null, {}, function(event, a){
 	
 	var btn = a;
 	var href = btn.attr('href');
@@ -16,8 +16,6 @@ $(document.body).on('fecss.menu-list.item.click', null, {}, function(event, a){
 		}
 	}
 	
-	btn.closest('.menu-list').find('.item.active').removeClass('active');
-	btn.closest('.item').addClass('active');
 	
 	var item = $(href + '.item-block');
 	if(item.size()) {
@@ -25,15 +23,41 @@ $(document.body).on('fecss.menu-list.item.click', null, {}, function(event, a){
 			
 		} else {
 			$('.item-block').removeClass('active');
-			item.addClass('active')
+			item.addClass('active');
 		}
+	} else {
+		var ib = $('<div/>',{
+			id : href,
+			class : 'item-block ',
+		})
+		$('.item-block').removeClass('active');
+		ib.addClass('active');
 	}
+	
+	btn.closest('.menu-list').find('.item.active').removeClass('active');
+	btn.closest('.item').addClass('active');
 	
 });
 
-$(document.body).on('click.fecss.menu-list.item.a', '.menu-list .item a', {}, function(event){
+$(document.body).on('fecss.menu-list.item.dialoged.click', null, {}, function(event, a){
+	
+	var btn = a;
+	
+	btn.closest('.menu-list').find('.item.active').removeClass('active');
+	btn.closest('.item').addClass('active');
+	
+});
+
+$(document.body).on('click.fecss.menu-list.item.contented.a', '.menu-list .item.contented a', {}, function(event){
 	event.preventDefault();
 	
-	$(document.body).trigger('fecss.menu-list.item.click', [$(this)]);
+	$(document.body).trigger('fecss.menu-list.item.contented.click', [$(this)]);
 	$(document.body).trigger('fecss.menu-container.hide');
+});
+
+$(document.body).on('click.fecss.menu-list.item.dialoged.a', '.menu-list .item.dialoged a', {}, function(event){
+	event.preventDefault();
+	
+	$(document.body).trigger('fecss.menu-list.item.dialoged.click', [$(this)]);
+	//$(document.body).trigger('fecss.menu-container.hide');
 });

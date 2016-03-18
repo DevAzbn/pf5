@@ -16,6 +16,12 @@
 				a {
 					#fe.color(#000000);
 				}
+				
+				.dialog-block {
+					left:100%;
+					#fe.h(auto);
+					#fe.z(5);
+				}
 			}
 			
 			&:after {
@@ -40,6 +46,21 @@
 				#fe.uppercase();
 				#fe.bold();
 				#fe.z(6);
+			}
+			
+			.dialog-block {
+				position:absolute;
+				top:0;
+				left:-100%;
+				max-width:100%;
+				transition:all @trans-speed ease;
+				overflow:hidden;
+				padding:2em;
+				
+				#fe.z(-1);
+				#fe.bg(#f5f8fa);
+				#fe.h(0%);
+				#fe.w(100%);
 			}
 			
 		}
