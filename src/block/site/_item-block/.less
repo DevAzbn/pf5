@@ -1,7 +1,7 @@
 .item-block {
 	position:absolute;
 	top:0;
-	right:100%;
+	right:150%;
 	padding:2em 4em;
 	#fe.w(100%);
 	#fe.z(2);
@@ -28,7 +28,7 @@
 			&:hover {
 				.meta-cont {
 					opacity:1;
-					
+					/*
 					@media @media-size-xs {
 						& {
 							opacity:0;
@@ -39,6 +39,7 @@
 							opacity:0;
 						}
 					}
+					*/
 				}
 			}
 			
@@ -50,11 +51,26 @@
 				opacity:0;
 				transition:all @trans-speed ease;
 				
+				@media @media-size-xs {
+					& {
+						opacity:1;
+					}
+				}
+				
+				@media @media-size-sm {
+					& {
+						opacity:1;
+					}
+				}
+				
 				.meta-item {
 					clear:both;
+					margin-bottom:1em;
+					#fe.size(1.3em);
 					
 					.title {
 						float:left;
+						
 					}
 					.value {
 						float:right;
@@ -75,7 +91,7 @@
 						padding:4em 0em 0em 0em;
 					}
 				}
-				@media @media-size-xs {
+				@media @media-size-sm {
 					& {
 						padding:4em 0em 0em 0em;
 					}

@@ -1,19 +1,14 @@
-	// http://labs.rampinteractive.co.uk/touchSwipe/demos/
 	
-	$('.touchevents .menu-container.touchswipe').swipe({
+	/*
+	$('.touchswipe').swipe({
+		// http://labs.rampinteractive.co.uk/touchSwipe/demos/
 		
-		swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
-			$(document.body).trigger('fecss.menu-container.hide');
+		swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+			console.log('.touchswipe swipe ' + direction);
 		},
-		threshold:33
-	});
-	
-	
-	$('.touchevents .content-container.touchswipe').swipe({
+		//swipeLeft ...
 		
-		swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
-			$(document.body).trigger('fecss.menu-container.show');
-		},
-		threshold:33
+		threshold:20
 	});
+	*/
 	

@@ -8,6 +8,7 @@
 	z-index:1;
 	/*overflow-x:hidden;*/
 	transition:all @trans-speed ease;
+	#fe.bg(#f5f8fa);
 	
 	@media @media-size-xs {
 		& {
@@ -36,5 +37,17 @@
 			width:75%;
 		}
 	}
+	
+	/*
+	&:before {
+		content:'';
+		position:absolute;
+		right:100%;
+		top:0;
+		#fe.w(100%);
+		#fe.h(100%);
+		#fe.bg(rgba(123,168,63,1));
+	}
+	*/
 	
 }

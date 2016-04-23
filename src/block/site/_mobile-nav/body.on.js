@@ -1,6 +1,14 @@
 
 $(document.body).on('fecss.menu-container.show', null, {}, function(event){
-	$('.window-width-xs .menu-container, .window-width-sm .menu-container').addClass('active');
+	$('.window-width-xs .menu-container, .window-width-sm .menu-container')
+		.addClass('active')
+		/*
+		.find('menu-list')
+			.css({
+				'top' : $(document).scrollTop(),
+			})
+		*/
+		;
 });
 
 $(document.body).on('fecss.menu-container.hide', null, {}, function(event){

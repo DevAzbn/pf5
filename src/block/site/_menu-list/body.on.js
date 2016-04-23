@@ -34,6 +34,10 @@ $(document.body).on('fecss.menu-list.item.contented.click', null, {}, function(e
 		ib.addClass('active');
 	}
 	
+	$('html, body').animate({
+		scrollTop: 0,
+	}, 333);
+	
 	btn.closest('.menu-list').find('.item.active').removeClass('active');
 	btn.closest('.item').addClass('active');
 	
@@ -44,7 +48,7 @@ $(document.body).on('fecss.menu-list.item.dialoged.click', null, {}, function(ev
 	var btn = a;
 	
 	btn.closest('.menu-list').find('.item.active').removeClass('active');
-	btn.closest('.item').addClass('active');
+	btn.closest('.item').addClass('active').find('.input-block input').eq(0).trigger('focus');
 	
 });
 

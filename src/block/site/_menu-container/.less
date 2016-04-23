@@ -9,6 +9,15 @@
 	transition:all @trans-speed ease;
 	#fe.bg(rgba(123,168,63,1));
 	
+	&:before {
+		content:'';
+		position:fixed;
+		left:0%;
+		top:0;
+		#fe.h(100%);
+		#fe.bg(rgba(123,168,63,1));
+	}
+	
 	@media @media-size-xs {
 		& {
 			width:100%;
@@ -18,6 +27,10 @@
 			&.active {
 				left:initial;
 				right:0;
+				
+				&:before {
+					width:100%;
+				}
 			}
 		}
 	}
@@ -31,6 +44,10 @@
 			&.active {
 				left:initial;
 				right:0;
+				
+				&:before {
+					width:100%;
+				}
 			}
 		}
 	}
@@ -38,12 +55,20 @@
 	@media @media-size-md {
 		& {
 			width:33%;
+			
+			&:before {
+				width:33%;
+			}
 		}
 	}
 	
 	@media @media-size-lg {
 		& {
 			width:25%;
+			
+			&:before {
+				width:25%;
+			}
 		}
 	}
 	
