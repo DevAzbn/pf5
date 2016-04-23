@@ -11,17 +11,18 @@ $(
 			
 			var pos = $(document).scrollTop();
 			
-			var ml = $('.menu-container .menu-list');
-			
-			
-			if(ml.closest('.menu-container').hasClass('active')) {
-				if(ml.data('margin-top') > pos) {
+			if(pos > 0) {
+				var ml = $('.menu-container .menu-list');
+				
+				if(ml.closest('.menu-container').hasClass('active')) {
+					if(ml.data('margin-top') > pos) {
+						ml.css({'margin-top' : pos + 'px'})
+						ml.data('margin-top', pos);
+					}
+				} else {
 					ml.css({'margin-top' : pos + 'px'})
 					ml.data('margin-top', pos);
 				}
-			} else {
-				ml.css({'margin-top' : pos + 'px'})
-				ml.data('margin-top', pos);
 			}
 			
 		}

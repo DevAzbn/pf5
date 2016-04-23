@@ -47,7 +47,7 @@ $(function(){}),$(function(){(screenJS.isMD()||screenJS.isLG())&&$(".menu-contai
 	
 	$(window).on('scroll',function(){
 		$(function(){var a=$(document).scrollTop(),o=$(".go-to-top");o.hasClass("active")?200>a&&o.removeClass("active"):a>200&&o.addClass("active")});
-$(function(){if(screenJS.isXS()||screenJS.isSM()){var a=$(document).scrollTop(),n=$(".menu-container .menu-list");n.closest(".menu-container").hasClass("active")?n.data("margin-top")>a&&(n.css({"margin-top":a+"px"}),n.data("margin-top",a)):(n.css({"margin-top":a+"px"}),n.data("margin-top",a))}});
+$(function(){if(screenJS.isXS()||screenJS.isSM()){var a=$(document).scrollTop();if(a>0){var n=$(".menu-container .menu-list");n.closest(".menu-container").hasClass("active")?n.data("margin-top")>a&&(n.css({"margin-top":a+"px"}),n.data("margin-top",a)):(n.css({"margin-top":a+"px"}),n.data("margin-top",a))}}});
 	}).trigger('scroll');
 	
 	$('body').on('changeClass',function(){

@@ -1,17 +1,3 @@
-@keyframes input-block-focused {
-	from {
-		outline:0px rgba(123,168,63,1) solid;
-	}
-	
-	50% {
-		outline:2px rgba(123,168,63,1) solid;
-	}
-	
-	to {
-		outline:0px rgba(123,168,63,1) solid;
-	}
-}
-
 .input-block {
 	display:block;
 	margin:1em 0;
@@ -28,13 +14,12 @@
 		padding: 0.3em;
 		width: 100%;
 		border: 1px rgba(123,168,63,1) solid;
+		border-radius:0;
 		#fe.size(2em);
 		#fe.color(#333333);
 		
 		&:focus {
-			animation-name:input-block-focused;
-			animation-duration: @trans-speed * 4;
-			animation-iteration-count: infinite;
+			outline:2px rgba(123,168,63,1) solid;
 		}
 		
 		&[type="submit"] {
@@ -43,6 +28,7 @@
 			padding: 0.3em 2em;
 			transition:all @trans-speed ease;
 			border: 1px rgba(123,168,63,1) solid;
+			border-radius:0;
 			#fe.w(initial);
 			#fe.bg(#f5f8fa);
 			#fe.color(rgba(123,168,63,1));
