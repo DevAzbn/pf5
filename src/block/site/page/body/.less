@@ -61,3 +61,26 @@ body {
 	}
 	
 }
+input, textarea  {
+	font-family: 'gost_a', 'Open Sans', 'Roboto', Arial, Verdana, Georgia, Tahoma, sans-serif, 'gost_b';
+	transition:all @trans-speed ease;
+	
+	&:focus {
+		#fe.bg(rgba(147,46,168,1));
+		#fe.color(@c-hex-w);
+	}
+}
+input[type="submit"], input[type="button"], button, pre, select, select option {
+	font-family: 'gost_b', 'Open Sans', 'Roboto', Arial, Verdana, Georgia, Tahoma, sans-serif, 'gost_a';
+}
+select {
+	&:focus {
+		#fe.bg(rgba(147,46,168,1));
+		#fe.color(@c-hex-w);
+		
+		option {
+			#fe.bg(@c-hex-w);
+			#fe.color(@c-hex-b);
+		}
+	}
+}
