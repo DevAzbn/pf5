@@ -756,6 +756,33 @@
 			}
 		}
 	}
+.input-block {
+	display:block;
+	margin:1em 0;
+	
+	label {
+		display: block;
+		margin-bottom: 0.3em;
+		#fe.size(1.5em);
+		#fe.bold();
+	}
+	
+	input, select, textarea {
+		display: block;
+		padding: 0.3em;
+		width: 100%;
+		border: 1px green solid;
+		#fe.size(2em);
+		
+		&[type="submit"] {
+			.cleardefault();
+			display: inline-block;
+			padding: 0.3em 2em;
+			#fe.w(initial);
+		}
+	}
+	
+}
 .line-gallery {
 	position:relative;
 	#fe.bpos();
@@ -1190,6 +1217,7 @@
 		transition:all @trans-speed ease;
 		padding:2em;
 		position:relative;
+		/*rgba(147,46,168,1)*/
 		
 		&:before {
 			content:'';
@@ -1220,25 +1248,25 @@
 				left:50%;
 				#fe.w(0%);
 				#fe.h(100%);
-				#fe.bg(rgba(147,46,168,1));
+				#fe.bg(rgba(123,168,63,1));
 			}
 			
 			&:after {
 				right:50%;
 				#fe.w(0%);
 				#fe.h(100%);
-				#fe.bg(rgba(147,46,168,1));
+				#fe.bg(rgba(123,168,63,1));
 			}
 			
 			.created_at {
 				transition:all @trans-speed ease;
 				margin-bottom:0.75em;
 				#fe.size(1.35em);
-				#fe.color(rgba(147,46,168,1));
+				#fe.color(rgba(123,168,63,1));
 			}
 			
 			&:hover {
-				outline:1px rgba(147,46,168,1) solid;
+				outline:1px rgba(123,168,63,1) solid;
 				
 				&:before, &:after {
 					#fe.w(50%);
@@ -1387,7 +1415,8 @@
 			
 			.image-cont {
 				margin-bottom:3em;
-				
+				outline:1px rgba(123,168,63,1) solid;
+				outline-offset:1px;
 			}
 			.meta-cont {
 				opacity:0;
@@ -1821,6 +1850,47 @@
 		}
 	}
 	
+}
+@keyframes smooth-viewing {from {visibility:0;opacity:0;}to{visibility:initial;opacity:1;}}
+
+body.smooth-animation {
+	.smooth-view {
+		animation-name: smooth-viewing;
+		animation-delay: @trans-speed * 10;
+		animation-duration: @trans-speed * 2;
+		animation-fill-mode: both;
+		
+		&:nth-child(1) {
+			animation-delay: @trans-speed * 1;
+		}
+		&:nth-child(2) {
+			animation-delay: @trans-speed * 2;
+		}
+		&:nth-child(3) {
+			animation-delay: @trans-speed * 3;
+		}
+		&:nth-child(4) {
+			animation-delay: @trans-speed * 4;
+		}
+		&:nth-child(5) {
+			animation-delay: @trans-speed * 5;
+		}
+		&:nth-child(6) {
+			animation-delay: @trans-speed * 6;
+		}
+		&:nth-child(7) {
+			animation-delay: @trans-speed * 7;
+		}
+		&:nth-child(8) {
+			animation-delay: @trans-speed * 8;
+		}
+		&:nth-child(9) {
+			animation-delay: @trans-speed * 9;
+		}
+		&:nth-child(10) {
+			animation-delay: @trans-speed * 10;
+		}
+	}
 }
 
 .social-block {
